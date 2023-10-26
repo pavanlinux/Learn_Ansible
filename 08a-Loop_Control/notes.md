@@ -5,10 +5,10 @@ The key loop control options include:
 
 - loop
 Specifies the list of items over which the loop iterates.
-
+  - Example: [01-looping-through-loop-output.yml](01-looping-through-loop-output.yml)
 - loop_var
 Defines the name of the loop variable that holds the current item in each iteration.
-  - Example: [02-loop-control.yml](02-loop-control.yml)
+  - Example: [02-loop-control-loop-var copy.yml](02-loop-control-loop-var copy.yml)
 
 - label
   Assigns a label to the loop to distinguish it from other loops within the playbook.
