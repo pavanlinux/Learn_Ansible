@@ -11,6 +11,7 @@
   - Gather Facts
   - Variables, Magic Variables
   - Creating Plays and Tasks
+  - Ansible Vaults
   - Tags
   - Loops
   - Conditions
