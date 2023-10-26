@@ -16,10 +16,13 @@ A typical Ansible playbook consists of the following key components:
 ## YAML Format
 Playbooks are written in YAML (Yet Another Markup Language), a human-readable data serialization format. YAML's simplicity and readability make it well-suited for describing tasks and configurations.
 
+In YAML, it's important to start each new YAML document with ``` --- ``` to indicate the beginning of a new document. This is especially important when you have multiple documents in a single YAML file.
+
 ## Hosts
 Playbooks specify the hosts or groups of hosts where the defined tasks will be executed. You can target a single host, multiple hosts, or groups of hosts.
 
 ```
+---
 - hosts: webserver
   tasks:
     - name: Ensure Apache is installed
