@@ -28,10 +28,12 @@ Playbook variables are defined in the playbook itself using the vars section. Th
     http_port: 80
   tasks:
     - name: Ensure Apache is installed
-      apt:
-        name: apache2
+      package:
+        name: httpd
         state: present
 ```
+
+Example Playbook is: [playbook variable](02-playbook-variables.yml)
 
 # Role Variables
 
