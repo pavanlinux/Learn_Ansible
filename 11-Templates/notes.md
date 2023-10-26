@@ -14,3 +14,45 @@ In Ansible, a "template" typically refers to an Ansible template, which is a way
 
 - **Rendered Template:**
   - The output of this template processing is a rendered configuration file, which is generated specifically for each host, based on its individual variable values.
+
+### Create a Playbook which uses Jinja template
+
+```
+---
+- name: install required software
+  hosts: centos_servers
+  gather_facts: yes
+  become: yes
+
+  tasks:
+    - name: install and start httpd services
+      ansible.builtin.package:
+        name: httpd
+        state: present
+      register: task_status
+
+    - name: start httpd services
+      ansible.builtin.service:
+        name: httpd
+        state: started
+
+    - name: use template to deploy a file
+      ansible.builtin.template:
+        src: html.j2
+        dest: /var/www/html/index.html
+```
+
+Create a file `templates/html.j2`
+
+```
+<html>
+<body>
+
+<h2> my operating system details are: </h2>
+<br> {{ ansible_host }}
+<br> {{ ansible_os_family }}
+<br> {{ task_status.results }}
+
+</body>
+</html>
+```
