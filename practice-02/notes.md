@@ -18,6 +18,8 @@ age: 30
 
 ## Lists
 Lists or arrays are represented using a hyphen followed by a space, and items in the list are indented. For example:
+```
 - item 1
 - item 2
 - item 3
+```
