@@ -53,7 +53,9 @@ ssh ansible@target_node
 ssh ansible@target_node
 ```
 
-# 👏 ** Congratulations! ** You have installed Ansible and set it up to connect to target nodes. 🙌
+# 👏👏 Congratulations! 👏👏
+# You have installed Ansible and set it up to connect to target nodes. 🙌
+
 
 ## Check if Ansible can connect to target nodes:
 - Create an inventory file called *hosts* and add below lines to it
