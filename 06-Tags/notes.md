@@ -72,6 +72,7 @@ Let's consider a practical example with a playbook that manages a web server. Th
       tags:
         - deployment
 ```
+Example Playbook: [01-install-and-configure-httpd.yml](01-install-and-configure-httpd.yml)
 
 In this example, we've assigned tags to different tasks:
 

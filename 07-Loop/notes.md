@@ -7,19 +7,22 @@ In Ansible, loops are used to iterate over a list of items and perform tasks mul
 Suppose you want to create multiple user accounts on a set of remote hosts. You can use a loop to iterate through a list of user names and create those accounts on each host.
 ```
 ---
+---
 - name: Create User Accounts
-  hosts: target_hosts
+  hosts: webserver
   tasks:
     - name: Create User Accounts
+      become: yes
       user:
         name: "{{ item }}"
-        state: present
+        state: absent # absent or present
         groups: users
       loop:
         - user1
         - user2
         - user3
 ```
+Example Playbook: [01-create-multiple-users.yml](01-create-multiple-users.yml)
 
 In this example:
 
@@ -42,6 +45,7 @@ When you run this playbook, Ansible will execute the user module three times, on
         state: directory
       loop: "{{ range(1, 10 ) | list }}"
 ```
+Example Playbook: [02-create-multiple-folders.yml](02-create-multiple-folders.yml)
 
 # Notes
 > [!IMPORTANT]
