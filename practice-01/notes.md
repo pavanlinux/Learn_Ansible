@@ -35,4 +35,13 @@
 
 # 👏 ** Congratulations! ** You have installed Ansible and set it up to connect to target nodes. 🙌
 
-
+## Check if Ansible can connect to target nodes:
+- Create an inventory file called *hosts* and add below lines to it
+  ```
+  <target_node_ip_or_hostname> ansible_user=ansible
+  <target_node_ip_or_hostname> ansible_user=ansible
+  ```
+- Run below command and observe the output
+  ```
+  ansible all -i hosts -m "ping"
+  ```
