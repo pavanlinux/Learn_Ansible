@@ -32,15 +32,18 @@ By using register, you can collect information or the status of a task, and then
 
 
 
-Registering variables with a loop
+# Registering variables with a loop
 You can register the output of a loop as a variable. For example
 
+```
 - name: Register loop output as a variable
   ansible.builtin.shell: "echo {{ item }}"
   loop:
     - "one"
     - "two"
   register: echo
+```
+
 When you use register with a loop, the data structure placed in the variable will contain a results attribute that is a list of all responses from the module. This differs from the data structure returned when using register without a loop.
 
 ```
