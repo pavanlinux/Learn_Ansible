@@ -7,11 +7,16 @@ The primary purpose of an Ansible inventory file is to define and organize the h
 ## Structure
 The inventory file is typically written in plain text or YAML format, and it can include the following elements:
 
-## Hosts
+## Hosts or IP
 Each host entry consists of a hostname or IP address. You can specify a single host or a list of hosts, making it flexible for managing multiple systems.
 ```
 webserver.example.com
 appserver.example.com
+```
+
+```
+192.168.1.20
+192.168.1.21
 ```
 
 ## Host Variables
