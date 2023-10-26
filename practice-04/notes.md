@@ -6,6 +6,12 @@ The primary purpose of Ansible playbooks is to automate tasks and configurations
 
 ## Structure
 A typical Ansible playbook consists of the following key components:
+- Plays
+- Hosts
+- Tasks
+- Handlers
+- Conditions
+- Roles
 
 ## YAML Format
 Playbooks are written in YAML (Yet Another Markup Language), a human-readable data serialization format. YAML's simplicity and readability make it well-suited for describing tasks and configurations.
