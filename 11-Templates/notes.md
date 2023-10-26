@@ -20,7 +20,7 @@ In Ansible, a "template" typically refers to an Ansible template, which is a way
 ```
 ---
 - name: install required software
-  hosts: centos_servers
+  hosts: webservers
   gather_facts: yes
   become: yes
 
