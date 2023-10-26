@@ -1,7 +1,7 @@
 # Blocks
 Blocks create logical groups of tasks. Blocks also offer ways to handle task errors, similar to exception handling in many programming languages.
 
-# Grouping tasks with blocks
+### Grouping tasks with blocks
 
 ```
 tasks:
@@ -21,4 +21,49 @@ tasks:
      become: true
      become_user: root
      ignore_errors: true
+```
+
+### Error handling with Blocks
+You can control how Ansible responds to task errors using blocks with `rescue` and `always` sections.
+
+### Error handling example:
+
+```
+ tasks:
+   - name: Handle the error
+     block:
+       - name: Print a message
+         ansible.builtin.debug:
+           msg: 'I execute normally'
+
+       - name: Force a failure
+         ansible.builtin.command: /bin/false
+
+       - name: Never print this
+         ansible.builtin.debug:
+           msg: 'I never execute, due to the above task failing, :-('
+     rescue:
+       - name: Print when errors
+         ansible.builtin.debug:
+           msg: 'I caught an error, can do stuff here to fix it, :-)'
+```
+### Block with Always Action
+```
+tasks:
+   - name: Always do X
+     block:
+       - name: Print a message
+         ansible.builtin.debug:
+           msg: 'I execute normally'
+
+       - name: Force a failure
+         ansible.builtin.command: /bin/false
+
+       - name: Never print this
+         ansible.builtin.debug:
+           msg: 'I never execute :-('
+     always:
+       - name: Always do this
+         ansible.builtin.debug:
+           msg: "This always executes, :-)"
 ```
