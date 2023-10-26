@@ -43,5 +43,6 @@ When you run this playbook, Ansible will execute the user module three times, on
       loop: "{{ range(1, 10 ) | list }}"
 ```
 
+# Notes
 > [!IMPORTANT]
 > You can also use other loop mechanisms like with_items or with_sequence to achieve similar results, but loop is the recommended way in newer Ansible versions for improved readability and consistency.
