@@ -9,22 +9,22 @@ Specifies the list of items over which the loop iterates.
 - loop_var
 Defines the name of the loop variable that holds the current item in each iteration.
 
-Example: [02-loop-control.yml](02-loop-control.yml)
+  - Example: [02-loop-control.yml](02-loop-control.yml)
 
 - label
-Assigns a label to the loop to distinguish it from other loops within the playbook.
+  - Assigns a label to the loop to distinguish it from other loops within the playbook.
 
-Example: [03-loop-control-label.yml](03-loop-control-label.yml)
+  - Example: [03-loop-control-label.yml](03-loop-control-label.yml)
 
 - index_var
 Allows you to create a loop variable that keeps track of the current iteration index.
 
-Example: [04-loop-control-index-var.yml](04-loop-control-index-var.yml)
+  - Example: [04-loop-control-index-var.yml](04-loop-control-index-var.yml)
 
 - pause
 Specifies the duration (in seconds) to pause between iterations of the loop. Useful when you want to keep some wait interval between instaling each software.
 
-Example: [05-loop-control-pause.yml](05-loop-control-pause.yml)
+  - Example: [05-loop-control-pause.yml](05-loop-control-pause.yml)
 
 - until
 Defines a condition that, when met, causes the loop to exit early before all items have been processed. Useful in checking if a website is up etc.
