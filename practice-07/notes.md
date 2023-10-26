@@ -46,3 +46,18 @@ When you run this playbook, Ansible will execute the user module three times, on
 # Notes
 > [!IMPORTANT]
 > You can also use other loop mechanisms like with_items or with_sequence to achieve similar results, but loop is the recommended way in newer Ansible versions for improved readability and consistency.
+
+> You can pass a list directly to a parameter for some plugins. Most of the packaging modules, like yum and apt, have this capability. When available, passing the list to a parameter is better than looping over the task. For example
+> 
+```
+- name: Optimal yum
+  ansible.builtin.yum:
+    name: "{{ list_of_packages }}"
+    state: present
+
+- name: Non-optimal yum, slower and may cause issues with interdependencies
+  ansible.builtin.yum:
+    name: "{{ item }}"
+    state: present
+  loop: "{{ list_of_packages }}"
+```
