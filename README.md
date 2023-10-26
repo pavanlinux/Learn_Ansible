@@ -18,5 +18,10 @@
   - Email Notifications
 - Ansible AWX
 
+### Clone Repository
 > You can use this repository which contains all the playbooks used during the lectures.
+> 
+```
+git clone learnwithvikasjha/udemy-ansible
+```
 
