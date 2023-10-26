@@ -4,7 +4,8 @@ Ansible is an *IT automation tool*. It can configure systems, deploy software, a
 > [!NOTE]
 > You cannot install Ansible on Windows Server, however you can manage Windows Servers through Ansible.
 
-Key Features
+> [!IMPORTANT]
+> ## Key Features
 ### Agentless Architecture
 Ansible is agentless, meaning it doesn't require any software or agents to be installed on the target hosts. This simplifies the deployment and management of systems, as there's no need to maintain agents on every managed node.
 
