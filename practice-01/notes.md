@@ -33,5 +33,6 @@
 6. Check if ansible can connect to all the target nodes.
 > ssh ansible@target_node
 
+👏 ** Congratulations! ** You have installed Ansible and set it up to connect to target nodes. 🙌
 
 
