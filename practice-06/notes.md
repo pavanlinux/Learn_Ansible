@@ -32,8 +32,9 @@ You can also specify multiple tags separated by commas to run tasks with any of 
 
 ### Skipping Tasks with Tags:
 To skip tasks with specific tags, you use the --skip-tags option when executing the playbook. For example, to skip tasks with the "tag2" tag, you would use:
-
+```
 ansible-playbook playbook.yml --skip-tags tag2
+```
 
 ## Example:
 
