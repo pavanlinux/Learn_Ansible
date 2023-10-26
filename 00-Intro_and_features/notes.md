@@ -43,4 +43,4 @@ Ansible integrates seamlessly with CI/CD pipelines, allowing automation of deplo
 Ansible can detect and report configuration drift, helping to ensure that systems remain compliant with the desired configurations. Ansible keeps a record of the last known state of each managed system based on the playbook execution. This known state acts as a reference point. When Ansible runs a playbook again, it detects any discrepancies between the current system state and the reference state.
 
 # Architecture
-![Here is how simple is the architecture of Ansible.](ansible-architecture.jpeg)
+![Here is how simple is the architecture of Ansible.](ansible-architecture.jpg)
