@@ -85,3 +85,6 @@ Extra variables are defined using the -e option when running an Ansible playbook
 > ansible-playbook myplaybook.yml -e "my_var=value"
 
 These are the various types of variables in Ansible, and understanding how to use them effectively is crucial for creating flexible and dynamic automation solutions.
+
+# Special Variables
+[Magic Variables: These variables cannot be set directly by the user; Ansible will always override them to reflect internal state.](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html)
