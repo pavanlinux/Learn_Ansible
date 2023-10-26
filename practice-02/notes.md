@@ -23,3 +23,37 @@ Lists or arrays are represented using a hyphen followed by a space, and items in
 - item 2
 - item 3
 ```
+
+## Nested Structures
+You can nest data structures within YAML, including dictionaries within dictionaries and lists within dictionaries. Maintain consistent indentation for nested structures.
+
+```
+person:
+  name: John Doe
+  age: 30
+  hobbies:
+    - Reading
+    - Swimming
+```
+
+## Comments
+YAML supports comments. Comments begin with the # symbol, and everything to the right of it is treated as a comment.
+
+```
+# This is a comment
+key: value
+```
+
+## Multiline Strings
+You can represent multiline strings using the | character for a literal block style. This preserves line breaks and indentation.
+```
+description: |
+  This is a multiline
+  string in YAML.
+```
+
+## Quoted Strings
+If your string contains characters that could be interpreted as a YAML indicator (e.g., :, -, #), you can enclose the string in double or single quotes.
+```
+message: "This is a string with a colon: it's inside quotes."
+```
