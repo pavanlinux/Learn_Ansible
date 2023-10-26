@@ -17,7 +17,7 @@ These variables are defined in the inventory files (e.g., hosts) and are associa
 192.168.1.20 ansible_user=ansible port=80 admin_user=root
 ```
 
-Example Playbook is: [Inventory variable](01-inventory-variables.yml)
+Example Playbook is: [01-inventory-variables.yml](01-inventory-variables.yml)
 
 # Playbook Variables:
 
@@ -35,7 +35,7 @@ Playbook variables are defined in the playbook itself using the vars section. Th
         state: present
 ```
 
-Example Playbook is: [playbook variable](02-playbook-variables.yml)
+Example Playbook is: [02-playbook-variables.yml](02-playbook-variables.yml)
 
 # Role Variables
 
@@ -70,7 +70,7 @@ Ansible can access environment variables that are set on the control machine. Th
         msg: "The value of MY_ENV_VAR is {{ lookup('env', 'HTML_PATH') }}"
 ```
 
-Example Playbook is: [Environment Variables](03-environment-variables.yml)
+Example Playbook is: [03-environment-variables.yml](03-environment-variables.yml)
 
 # Registered Variables:
 
@@ -104,7 +104,7 @@ Group variables are defined in the inventory files and apply to all hosts in a p
           "default port is: {{ default_port }}"
 
 ```
-Example Playbook is: [Group Variables](04-group-variables.yml)
+Example Playbook is: [04-group-variables.yml](04-group-variables.yml)
 
 # Default Variables:
 
@@ -122,4 +122,4 @@ These are the various types of variables in Ansible, and understanding how to us
 # Special Variables
 [Magic Variables: These variables cannot be set directly by the user; Ansible will always override them to reflect internal state.](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html)
 
-Example Playbook is: [Special Variables](05-magic-variables.yml)
+Example Playbook is: [05-magic-variables.yml](05-magic-variables.yml)
