@@ -28,5 +28,5 @@ The task uses the user module to create user accounts. It specifies a loop with 
 The {{ item }} expression is used to reference the current value in the loop (the current user name being processed).
 When you run this playbook, Ansible will execute the user module three times, once for each user in the list. As a result, it will create the specified user accounts on the target hosts.
 
-[!IMPORTANT]
+> [!IMPORTANT]
 > You can also use other loop mechanisms like with_items or with_sequence to achieve similar results, but loop is the recommended way in newer Ansible versions for improved readability and consistency.
