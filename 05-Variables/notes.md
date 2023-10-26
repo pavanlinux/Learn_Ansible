@@ -17,6 +17,8 @@ These variables are defined in the inventory files (e.g., hosts) and are associa
 192.168.1.20 ansible_user=ansible port=80 admin_user=root
 ```
 
+Example Playbook is: [playbook variable](01-inventory-variables.yml)
+
 # Playbook Variables:
 
 Playbook variables are defined in the playbook itself using the vars section. They are used to set variables specific to a particular playbook. Playbook variables have the highest precedence within a playbook.

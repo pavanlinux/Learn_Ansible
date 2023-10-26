@@ -31,6 +31,8 @@ Playbooks specify the hosts or groups of hosts where the defined tasks will be e
         name: httpd
         state: present
 ```
+Example Playbook: [install httpd](01-install-httpd.yml)
+
 
 ## Tasks
 Tasks are the individual steps or actions you want Ansible to perform on the target hosts. Each task consists of a name, a module (which defines the action to be taken), and relevant module parameters.
@@ -49,6 +51,8 @@ Tasks are the individual steps or actions you want Ansible to perform on the tar
         name: httpd
         state: started
 ```
+
+Example Playbook: [install and start httpd](02-install-and-start-httpd.yml)
 
 ## Handlers
 Handlers are tasks that are triggered by other tasks. They are typically used to restart services or perform actions when certain conditions are met.
@@ -69,6 +73,9 @@ Handlers are tasks that are triggered by other tasks. They are typically used to
         name: httpd
         state: started
 ```
+
+Example Playbook: [install and start httpd](03-install-and-start-httpd-handler.yml)
+
 
 ## Variables
 Playbooks can define and use variables to make them more dynamic and reusable. Variables can be set at the playbook level, role level, or task level.
