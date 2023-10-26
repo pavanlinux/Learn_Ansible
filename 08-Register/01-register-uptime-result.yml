@@ -1,0 +1,11 @@
+---
+- name: Example Playbook with Register
+  hosts: webserver
+  tasks:
+    - name: Get system uptime
+      command: uptime
+      register: uptime_result
+
+    - name: Display uptime
+      debug:
+        var: uptime_result.stdout
