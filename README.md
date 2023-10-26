@@ -11,6 +11,7 @@
   - Gather Facts
   - Variables, Magic Variables
   - Creating Plays and Tasks
+  - Tags
   - Loops
   - Conditions
   - Register Outputs
