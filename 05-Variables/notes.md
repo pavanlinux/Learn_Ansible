@@ -17,7 +17,7 @@ These variables are defined in the inventory files (e.g., hosts) and are associa
 192.168.1.20 ansible_user=ansible port=80 admin_user=root
 ```
 
-Example Playbook is: [playbook variable](01-inventory-variables.yml)
+Example Playbook is: [Inventory variable](01-inventory-variables.yml)
 
 # Playbook Variables:
 
@@ -60,6 +60,18 @@ Fact variables are automatically gathered by Ansible when it connects to a host 
 
 Ansible can access environment variables that are set on the control machine. These can be useful for providing sensitive information or configuration details that should not be hard-coded in playbooks.
 
+```
+---
+- name: Example Playbook with Environment Variables
+  hosts: webserver
+  tasks:
+    - name: Show the value of an environment variable using lookup
+      debug:
+        msg: "The value of MY_ENV_VAR is {{ lookup('env', 'HTML_PATH') }}"
+```
+
+Example Playbook is: [Environment Variables](03-environment-variables.yml)
+
 # Registered Variables:
 
 These variables are registered using the register keyword in a task. They store the output of a task and can be used in subsequent tasks. For example, you might register the output of a shell command and then process that output in another task.
@@ -79,6 +91,21 @@ These variables are registered using the register keyword in a task. They store 
 
 Group variables are defined in the inventory files and apply to all hosts in a particular group. They can be used to set common configurations for multiple hosts.
 
+```
+---
+- hosts: webserver
+  tasks:
+    - name: Show inventory variable values
+      debug:
+        msg: |
+          " inventory source: {{ ansible_inventory_sources }}"
+          "ansible user is: {{ ansible_user }}"
+          "ansible default HTML directory: {{ default_html_dir }}"
+          "default port is: {{ default_port }}"
+
+```
+Example Playbook is: [Group Variables](04-group-variables.yml)
+
 # Default Variables:
 
 Default variables are defined within roles and are used as default values when a variable is not explicitly set. These defaults can be overridden in playbooks or inventory.
@@ -86,9 +113,13 @@ Default variables are defined within roles and are used as default values when a
 # Extra Variables:
 
 Extra variables are defined using the -e option when running an Ansible playbook. They provide a way to pass additional variables to the playbook at runtime.
-> ansible-playbook myplaybook.yml -e "my_var=value"
+
+> ansible-playbook -i hosts 01-inventory-variables.yml -e "default_html_dir=/tmp"
+
 
 These are the various types of variables in Ansible, and understanding how to use them effectively is crucial for creating flexible and dynamic automation solutions.
 
 # Special Variables
 [Magic Variables: These variables cannot be set directly by the user; Ansible will always override them to reflect internal state.](https://docs.ansible.com/ansible/latest/reference_appendices/special_variables.html)
+
+Example Playbook is: [Special Variables](05-magic-variables.yml)
