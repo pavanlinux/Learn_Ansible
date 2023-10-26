@@ -12,6 +12,11 @@ In Ansible, there are several types of variables that you can use to customize y
 
 These variables are defined in the inventory files (e.g., hosts) and are associated with specific hosts or groups of hosts. They can be used to set host-specific configurations.
 
+```
+[webserver]
+192.168.1.20 ansible_user=ansible port=80 admin_user=root
+```
+
 # Playbook Variables:
 
 Playbook variables are defined in the playbook itself using the vars section. They are used to set variables specific to a particular playbook. Playbook variables have the highest precedence within a playbook.
