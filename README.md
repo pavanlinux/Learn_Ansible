@@ -37,6 +37,10 @@
 > You can use this repository which contains all the playbooks used during the lectures.
 > Run below command to clone the repository.
 
+
+| Course Platform | URL |
+| ------ | ------ |
+| Udemy | [httpd://udemy.com/][PlDb] |
 ```
 git clone learnwithvikasjha/udemy-ansible
 ```
