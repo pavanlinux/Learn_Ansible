@@ -110,4 +110,9 @@ ansible_ssh_private_key_file=~/.ssh/id_rsa
 
 This inventory file defines three groups ("web," "app," and "database") with associated hosts and group variables.
 
+# Inventory Best Practices
+- Use Inventory Groups
+- Separate Inventory per Environment E.g Dev and Prod
+- Use Dynamic Inventory for clouds
+
 #### The Ansible inventory file is a crucial component for managing infrastructure and automating tasks across a variety of hosts, making it an essential tool for system administrators, DevOps engineers, and automation enthusiasts.
