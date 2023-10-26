@@ -83,13 +83,13 @@ Now, you can use the --tags and --skip-tags options when running the playbook to
 To run only the initial setup task:
 
 ```
-ansible-playbook playbook.yml --tags initial-setup
+ansible-playbook 01-install-and-configure-httpd.yml --tags initial-setup
 ```
 
 To skip the deployment task:
 
 ```
-ansible-playbook playbook.yml --skip-tags deployment
+ansible-playbook 01-install-and-configure-httpd.yml --skip-tags deployment
 ```
 
 Tags provide flexibility and control when working with complex playbooks, allowing you to focus on specific tasks and streamline your automation workflow.

@@ -1,0 +1,29 @@
+- name: Web Server Configuration
+  hosts: webserver
+  tasks:
+    - name: Update package cache
+      package:
+        update_cache: yes
+      tags:
+        - initial-setup
+
+    - name: Install Apache
+      package:
+        name: httpd
+        state: present
+      tags:
+        - webserver
+
+    - name: Start Apache
+      service:
+        name: httpd
+        state: started
+      tags:
+        - webserver
+
+    - name: Deploy Web Application
+      copy:
+        src: /tmp/index.html
+        dest: /var/www/html
+      tags:
+        - deployment
