@@ -24,10 +24,11 @@ Playbooks specify the hosts or groups of hosts where the defined tasks will be e
 ```
 ---
 - hosts: webserver
+  become: yes
   tasks:
     - name: Ensure Apache is installed
-      apt:
-        name: apache2
+      package:
+        name: httpd
         state: present
 ```
 
@@ -36,14 +37,16 @@ Tasks are the individual steps or actions you want Ansible to perform on the tar
 
 ```
 - hosts: webserver
+  become: yes
   tasks:
     - name: Ensure Apache is installed
-      apt:
-        name: apache2
-        state: present
-    - name: Start Apache service
+      package:
+        name: httpd
+        state: present #Change state to absent if you want uninstall 
+
+    - name: Ensure Apache is started 
       service:
-        name: apache2
+        name: httpd
         state: started
 ```
 
@@ -52,17 +55,18 @@ Handlers are tasks that are triggered by other tasks. They are typically used to
 
 ```
 - hosts: webserver
+  become: yes
   tasks:
     - name: Ensure Apache is installed
-      apt:
-        name: apache2
-        state: present
-      notify: Start Apache
+      package:
+        name: httpd
+        state: present #Change state to absent if you want uninstall 
+      notify: apache_started
 
   handlers:
-    - name: Start Apache
+    - name: apache_started
       service:
-        name: apache2
+        name: httpd
         state: started
 ```
 
