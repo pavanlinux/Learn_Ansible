@@ -33,6 +33,7 @@
   - Running Playbooks in AWX
   - Managing Inventories in AWX
   - Creating Template and Workflows in AWX
+- Best Practices
 
 ### Clone Repository
 > You can use this repository which contains all the playbooks used during the lectures.
