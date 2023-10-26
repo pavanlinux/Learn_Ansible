@@ -97,3 +97,6 @@ Subsequent loops over the registered variable to inspect the results may look li
   loop: "{{ echo.results }}"
 ```
 
+Example Playbook is: [03-looping-through-loop-output.yml](03-looping-through-loop-output.yml)
+
+# Loop Control

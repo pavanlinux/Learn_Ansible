@@ -13,6 +13,10 @@
         - wget
         - telnet
       register: softare_installation_output
+
     - name: show softare_installation_output
       debug:
-        msg: "{{ softare_installation_output }}"
+        msg: "{{ software.results }}"
+      loop: "{{ softare_installation_output.results }}"
+      loop_control:
+        loop_var: software

@@ -12,7 +12,16 @@
         - ntp
         - wget
         - telnet
+      loop_control:
+        pause: 5
       register: softare_installation_output
+
     - name: show softare_installation_output
       debug:
-        msg: "{{ softare_installation_output }}"
+        msg: "item position is : {{ idx }} , {{ software.results }}"
+      loop: "{{ softare_installation_output.results }}"
+      loop_control:
+        loop_var: software
+        label: "{{ inventory_hostname }}"
+        index_var: idx
+        pause: 10
