@@ -1,4 +1,4 @@
 - name: install httpd
   package:
     name: httpd
-    state: installed
+    state: present

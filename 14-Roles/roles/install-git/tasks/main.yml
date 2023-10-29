@@ -1,4 +1,4 @@
 - name: install git
   package:
     name: git
-    state: installed
+    state: present
