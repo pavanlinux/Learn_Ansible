@@ -38,22 +38,29 @@ useradd -m ansible
 echo "ansible ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 ```
 
-3. Generate ssh key for ansible user on the Control Node.
+
+3. Setup a password for Ansible user
+```
+passwd <username>
+```
+
+
+4. Generate ssh key for ansible user on the Control Node.
 ```
 ssh-keygen
 ```
 
-4. Copy ssh ID to all the target nodes.
+5. Copy ssh ID to all the target nodes.
 ```
 ssh-copy-id target_node
 ```
 
-5. Check if we are able to connect to Target Nodes from Control Node.
+6. Check if we are able to connect to Target Nodes from Control Node.
 ```
 ssh ansible@target_node
 ```
 
-6. Check if ansible can connect to all the target nodes.
+7. Check if ansible can connect to all the target nodes.
 ```
 ssh ansible@target_node
 ```
