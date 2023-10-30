@@ -16,6 +16,11 @@ sudo yum -y install epel-repo
 sudo yum -y update
 ```
 
+5. Install Ansible
+```
+sudo yum -y install ansible
+```
+
 5. Check Ansible Version
 ```
 ansible --version
