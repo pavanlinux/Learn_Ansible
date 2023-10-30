@@ -6,17 +6,17 @@
 sudo yum -y update
 ```
 
-3. Install EPEL (Extra Packages for Enterprise Linux) repository. 
+2. Install EPEL (Extra Packages for Enterprise Linux) repository. 
 ```
 sudo yum -y install epel-repo
 ```
 
-4. Update the repository cache
+3. Update the repository cache
 ```
 sudo yum -y update
 ```
 
-5. Install Ansible
+4. Install Ansible
 ```
 sudo yum -y install ansible
 ```
