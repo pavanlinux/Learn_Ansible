@@ -8,4 +8,5 @@
 
     - name: Display uptime
       debug:
-        var: uptime_result.stdout
+        msg: "{{ uptime_result.rc }}"
+        

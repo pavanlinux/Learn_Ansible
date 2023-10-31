@@ -6,6 +6,8 @@
         update_cache: yes
       tags:
         - initial-setup
+        - prerequisite
+        - centos
 
     - name: Install Apache
       package:

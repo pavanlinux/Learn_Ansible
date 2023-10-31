@@ -6,7 +6,7 @@
     - name: install required softwares
       package:
         name: "{{ item }}"
-        state: present
+        state: absent
       loop:
         - httpd
         - ntp

@@ -20,4 +20,4 @@
       loop: "{{ softare_installation_output.results }}"
       loop_control:
         loop_var: software
-        label: "{{ inventory_hostname }}"
+        label: "software_installation_status"

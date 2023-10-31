@@ -4,4 +4,4 @@
     - name: Ensure Apache is installed
       package:
         name: httpd
-        state: present #Change state to absent if you want uninstall 
+        state: absent #Change state to absent if you want uninstall 
