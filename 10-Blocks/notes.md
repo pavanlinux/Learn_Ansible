@@ -23,6 +23,8 @@ tasks:
      ignore_errors: true
 ```
 
+Example: [01-group-tasks-with-blocks.yml](01-group-tasks-with-blocks.yml)
+
 ### Error handling with Blocks
 You can control how Ansible responds to task errors using blocks with `rescue` and `always` sections.
 
@@ -47,6 +49,9 @@ You can control how Ansible responds to task errors using blocks with `rescue` a
          ansible.builtin.debug:
            msg: 'I caught an error, can do stuff here to fix it, :-)'
 ```
+
+Example: [02-error-handling-with-tasks.yml](02-error-handling-with-tasks.yml)
+
 ### Block with Always Action
 ```
 tasks:
@@ -67,3 +72,4 @@ tasks:
          ansible.builtin.debug:
            msg: "This always executes, :-)"
 ```
+Example: [03-always-do-example.yml](03-always-do-example.yml)
