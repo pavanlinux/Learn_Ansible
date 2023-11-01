@@ -15,7 +15,7 @@
              name: httpd
              state: started
              enabled: True
-       when: ansible_facts['distribution'] == 'CentOS'
+       when: ansible_facts['distribution'] == 'Ubuntu'
        become: true
        become_user: root
        ignore_errors: true

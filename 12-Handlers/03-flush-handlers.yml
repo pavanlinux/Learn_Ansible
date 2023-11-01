@@ -2,6 +2,7 @@
  - name: flush handlers example
    hosts: webserver
    gather_facts: yes
+   become: yes
    tasks:
      - name: update packages
        become:  yes
@@ -17,6 +18,7 @@
        copy:
          content: " {{ ansible_date_time }} "
          dest: /tmp/test.txt
+         force: true
        notify: send email
        
    handlers:
