@@ -41,11 +41,11 @@ Some of the commonly used Ansible modules include:
 
 - [copy](https://docs.ansible.com/ansible/2.9/modules/copy_module.html#copy-module): The copy module is used to transfer files from the control machine to remote hosts.
 
-- file: The file module enables you to manage files and directories, including creating, deleting, or changing file permissions.
+- [file](https://docs.ansible.com/ansible/2.9/modules/file_module.html#file-module): The file module enables you to manage files and directories, including creating, deleting, or changing file permissions.
 
-- template: The template module is used for templating files. It allows you to dynamically generate configuration files by filling in variables in templates.
+- [template](https://docs.ansible.com/ansible/2.9/modules/template_module.html#template-module): The template module is used for templating files. It allows you to dynamically generate configuration files by filling in variables in templates.
 
-- lineinfile: This module helps you manage lines in files. You can use it to add, modify, or delete lines in configuration files.
+- [lineinfile](https://docs.ansible.com/ansible/2.9/modules/lineinfile_module.html#lineinfile-module): This module helps you manage lines in files. You can use it to add, modify, or delete lines in configuration files.
 
 - command/shell: These modules allow you to run arbitrary shell commands or scripts on remote hosts. The command module is used for single commands, while the shell module is suitable for running scripts.
 
@@ -58,10 +58,6 @@ Some of the commonly used Ansible modules include:
 - git: The git module is used for managing Git repositories. You can clone, pull, or push code repositories on remote hosts.
 
 - docker_image/docker_container: These modules manage Docker containers and images. You can build, start, stop, and manage Docker containers.
-
-- lineinfile: This module is helpful for managing lines in files, such as adding, modifying, or deleting lines in configuration files.
-
-- copy: The copy module is used for copying files from the control machine to remote hosts.
 
 - yum_repository/dnf_repository: These modules manage YUM and DNF repositories on Linux systems, allowing you to add, modify, or remove repository configurations.
 
