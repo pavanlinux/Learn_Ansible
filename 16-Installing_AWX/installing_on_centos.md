@@ -21,6 +21,7 @@ sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 pip3 install setuptools_rust
 pip3 install wheel
 pip3 install docker-compose
+pip3 install docker
 ```
 
 - Start and Enable Docker
