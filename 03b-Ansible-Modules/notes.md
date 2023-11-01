@@ -31,3 +31,50 @@ You can explore Ansible's extensive library of built-in modules to automate a wi
 
 # All Modules
 Here is the list of all the modules available. [All Modules](https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html)
+
+
+# Commonly Used Modules
+
+Some of the commonly used Ansible modules include:
+
+- apt/yum/dnf: These package management modules allow you to install, update, or remove packages on Linux systems using the respective package manager. Modules include apt, yum, and dnf.
+
+- copy: The copy module is used to transfer files from the control machine to remote hosts.
+
+- file: The file module enables you to manage files and directories, including creating, deleting, or changing file permissions.
+
+- template: The template module is used for templating files. It allows you to dynamically generate configuration files by filling in variables in templates.
+
+- lineinfile: This module helps you manage lines in files. You can use it to add, modify, or delete lines in configuration files.
+
+- command/shell: These modules allow you to run arbitrary shell commands or scripts on remote hosts. The command module is used for single commands, while the shell module is suitable for running scripts.
+
+- service/systemd: These modules manage services and daemons. You can start, stop, enable, or disable services using these modules.
+
+- user/group: The user and group modules allow you to create, modify, or delete user accounts and groups on remote hosts.
+
+- apt_repository/yum_repository/dnf_repository: These modules manage package repositories, allowing you to add, modify, or remove repository configurations on Linux systems.
+
+- git: The git module is used for managing Git repositories. You can clone, pull, or push code repositories on remote hosts.
+
+- docker_image/docker_container: These modules manage Docker containers and images. You can build, start, stop, and manage Docker containers.
+
+- lineinfile: This module is helpful for managing lines in files, such as adding, modifying, or deleting lines in configuration files.
+
+- copy: The copy module is used for copying files from the control machine to remote hosts.
+
+- yum_repository/dnf_repository: These modules manage YUM and DNF repositories on Linux systems, allowing you to add, modify, or remove repository configurations.
+
+- mysql_db/mysql_user: These modules enable you to manage MySQL databases and users. You can create, modify, and remove databases and user accounts.
+
+- wait_for: The wait_for module allows you to wait for certain conditions on remote hosts, such as waiting for a network service to become available.
+
+- template: The template module is used to create configuration files by filling in variables in templates.
+
+- ping: The ping module is a simple module that checks the connectivity to remote hosts.
+
+- shell/command: These modules execute arbitrary shell commands or scripts on remote hosts. The shell module is typically used for running scripts, while the command module is used for single commands.
+
+- setup: The setup module gathers system facts and stores them as Ansible facts, which can be used in your playbooks to make decisions or configure systems based on the remote host's characteristics.
+
+These are just a few examples of commonly used Ansible modules. Ansible's extensive module library makes it a versatile tool for automating a wide range of tasks on different systems and platforms. You can refer to Ansible's documentation for a complete list of built-in modules and their documentation to explore their capabilities and usage
