@@ -51,3 +51,30 @@ project_data_dir="/var/lib/awx/projects"
 ansible-playbook -i ~/awx/installer/inventory ~/awx/installer/install.yml
 ```
 
+- Check if docker processes are running
+```
+docker ps
+```
+
+# Open Firewall Ports
+You may need to open firewall ports to allow AWX web interface to be accessed from outside this server.
+```
+firewall-cmd --zone=public --add-masquerade --permanent
+firewall-cmd --permanent --add-service=http
+firewall-cmd --permanent --add-service=https
+firewall-cmd --reload
+```
+
+# Open AWX User Interface
+> open the url on the browser:
+> <ip address or hostname>:80/
+
+# Stopping AWX Services
+```
+docker container stop awx_task awx_web awx_redis awx_postgres
+```
+
+# Starting AWX Services
+```
+docker container start awx_postgres awx_redis awx_task awx_web
+```
