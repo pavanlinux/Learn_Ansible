@@ -4,7 +4,7 @@ In order to send email we can use `mail` module. Here is an example playbook.
 ```
 ---
 - name: send email example
-  hosts: 192.168.1.20
+  hosts: localhost
   gather_facts: no
   tasks:
     - name: Send an email
