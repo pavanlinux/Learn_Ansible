@@ -39,7 +39,7 @@ Some of the commonly used Ansible modules include:
 
 - apt/yum/dnf: These package management modules allow you to install, update, or remove packages on Linux systems using the respective package manager. Modules include apt, yum, and dnf.
 
-- copy: The copy module is used to transfer files from the control machine to remote hosts.
+- [copy](https://docs.ansible.com/ansible/2.9/modules/copy_module.html#copy-module): The copy module is used to transfer files from the control machine to remote hosts.
 
 - file: The file module enables you to manage files and directories, including creating, deleting, or changing file permissions.
 
