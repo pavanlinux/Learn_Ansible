@@ -1,6 +1,6 @@
 ---
 - name: send email example
-  hosts: 192.168.1.20
+  hosts: localhost
   gather_facts: no
   tasks:
     - name: Send an email
