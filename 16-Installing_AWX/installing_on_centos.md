@@ -66,8 +66,8 @@ firewall-cmd --reload
 ```
 
 # Open AWX User Interface
-> open the url on the browser:
-> <ip address or hostname>:80/
+open the url on the browser:
+- <ip address or hostname>:80/
 
 # Stopping AWX Services
 ```
