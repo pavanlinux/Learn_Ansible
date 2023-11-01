@@ -22,7 +22,7 @@ Here is an example of a simple Ansible playbook that gathers facts:
 ```
 ---
 - name: Gather Facts Example
-  hosts: web_server
+  hosts: webserver
   gather_facts: yes  # This is the default behavior, so you can omit it.
 
   tasks:
