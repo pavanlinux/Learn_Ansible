@@ -7,8 +7,8 @@
       mail:
         host: smtp.hostinger.com
         port: 587
-        username: email@itpanther.com
-        password: StrongP@ssword001
+        username: 
+        password: 
         to: vijha1989@mailinator.com
         subject: "new code deployed"
         body: "new code deployed successfully"
