@@ -16,6 +16,13 @@ sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 sudo yum install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
+- Install setuptools_rust, wheel and docker-compose from `pip3`
+```
+pip3 install setuptools_rust
+pip3 install wheel
+pip3 install docker-compose
+```
+
 - Start and Enable Docker
 ```
 sudo systemctl start docker
