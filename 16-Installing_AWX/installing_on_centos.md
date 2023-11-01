@@ -22,6 +22,7 @@ pip3 install setuptools_rust
 pip3 install wheel
 pip3 install docker-compose
 pip3 install docker
+pip3 install docker-py
 ```
 
 - Start and Enable Docker
