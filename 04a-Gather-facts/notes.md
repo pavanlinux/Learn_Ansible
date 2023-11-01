@@ -1,4 +1,5 @@
 # Gather Facts
+
 In Ansible, "gather facts" refers to the process of collecting information about the remote hosts (target machines) before executing tasks on them. These facts include details about the system, such as the operating system, hardware specifications, network configuration, and more. Gathering facts is an important initial step in Ansible playbooks and can provide essential information for making decisions and customizing tasks based on the characteristics of the remote hosts.
 
 When you run an Ansible playbook or ad-hoc command, the "gather_facts" task is automatically executed by default. Ansible uses various modules to collect facts from the remote hosts. Some common facts gathered by Ansible include:
@@ -35,3 +36,11 @@ Here is an example of a simple Ansible playbook that gathers facts:
 ```
 
 In this playbook, facts about the remote hosts are gathered, and then tasks use the gathered facts to display the hostname and operating system information.
+
+
+# Setup Module
+The "setup" module in Ansible is an internal module that is automatically executed by default when Ansible connects to a remote host to gather facts. It is responsible for retrieving a wide range of system information from the target machine and storing it as Ansible facts, similar to the "gather_facts" process I described in my previous response.
+
+The "setup" module collects a comprehensive set of system details, such as the hostname, IP address, hardware specifications, installed software packages, and more. This information is then made available as variables that you can use in your Ansible playbooks to make decisions, configure systems, or perform various tasks.
+
+You don't typically need to explicitly call the "setup" module in your playbooks because it's automatically executed as part of the initial connection process when you run an Ansible playbook. Ansible's default behavior is to gather facts using the "setup" module, and the collected facts are stored in the ansible_facts variable, making them readily accessible for use in subsequent tasks.
