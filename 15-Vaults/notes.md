@@ -1,3 +1,4 @@
+# Encrypting with Ansible Vaults
 Encrypting an Ansible inventory can be useful when you need to protect sensitive information, such as server passwords or secret keys. You can use Ansible Vault to encrypt your inventory file. Here's an example of how to encrypt an inventory file and then run an Ansible playbook using that encrypted inventory.
 
 Create an Inventory File:
