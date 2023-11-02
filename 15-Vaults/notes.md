@@ -43,16 +43,8 @@ ansible-vault encrypt_string 'mysecretvalue'
 ```
 ansible-vault encrypt_password
 ```
-
-- `list`: List the encrypted files in a directory.
-```
-ansible-vault list directory/
-```
-- `info`: Show information about an encrypted file, such as the encryption method and version.
-```
-ansible-vault info file.yml
-```
 - `--vault-password-file` : Specify a file that contains the vault password, avoiding the need to enter it interactively each time.
+- 
 ```
 ansible-vault edit file.yml --vault-password-file mypassword.txt
 ```
