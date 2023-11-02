@@ -42,8 +42,7 @@ You are going to receive JSON response which contains token. Example is shown be
 Replace the bearer token with the token generated in previous steps.
 ```
 curl --location 'http://192.168.1.19/api/v2/job_templates/' \
---header 'Authorization: Bearer _zzghA1107f5SbKovtqj5Gbrgtqm9dy_' \
---header 'Cookie: csrftoken=IFoVY2knj1kKCCECWHhcF3k0JucDBPcjfTssIljCjjXplj76ms7eyA8BRaH0FJ6g'
+--header 'Authorization: Bearer _zzghA1107f5SbKovtqj5Gbrgtqm9dy_'
 ```
 
 - Launch Job Tempalate
