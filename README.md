@@ -40,7 +40,7 @@
 > You can use this repository which contains all the playbooks used during the lectures.
 > Run below command to clone the repository.
 ```
-git clone learnwithvikasjha/udemy-ansible
+git clone https://github.com/pavanlinux/Learn_Ansible
 ```
 
 ### Course Link:
